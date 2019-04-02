@@ -8,7 +8,6 @@ use Illuminate\Support\Str;
 class Category extends Model
 {
 	// Mass assigned
-
 	protected $guarded = [];
 
 	// Mutators
