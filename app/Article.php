@@ -38,4 +38,9 @@ class Article extends Model
 	{
 		return $query->orderBy('created_at', 'desc')->take($count)->get();
 	}
+
+	public function downloads()
+	{
+		return $this->morphToMany(Download::class, 'downoloadable');
+	}
 }

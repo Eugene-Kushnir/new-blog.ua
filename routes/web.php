@@ -13,6 +13,7 @@ Route::group([
 			->name('admin.index');
 		Route::resource('/category', 'CategoryController', ['as'=>'admin']);
 		Route::resource('/article', 'ArticleController', ['as'=>'admin']);
+		Route::resource('/download', 'DownloadController')->only(['store', 'update', 'destroy']);
 		Route::group( ['prefix' => 'user_managment', 'namespace' => 'UserManagment'], function () {
 			Route::resource('/user', 'UserController', [
 				'as' => 'admin.user_managment'
